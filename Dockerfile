@@ -8,7 +8,7 @@ COPY target/com.hotelmgmtsys.war /usr/local/tomcat/webapps/
 EXPOSE 8081
 
 # Use Maven to build the application
-FROM maven:3.8.5-openjdk-21 as builder
+FROM maven:3.8.5-openjdk-11 as builder
 WORKDIR /app
 COPY . .
 RUN mvn clean package
