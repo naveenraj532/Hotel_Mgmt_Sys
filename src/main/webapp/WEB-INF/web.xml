@@ -1,0 +1,18 @@
+<web-app>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.hotel.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>BookingServlet</servlet-name>
+    <servlet-class>com.hotel.servlet.BookingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BookingServlet</servlet-name>
+    <url-pattern>/bookRoom</url-pattern>
+  </servlet-mapping>
+</web-app>
