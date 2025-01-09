@@ -1,9 +1,14 @@
-FROM openjdk
+# Use an official Tomcat base image
+FROM tomcat:9.0
 
-WORKDIR /app
+# Set the working directory inside the container
+WORKDIR /usr/local/tomcat/webapps/
 
-COPY . /app
+# Copy your application files (JSP and others) into the container's webapps directory
+COPY . /usr/local/tomcat/webapps/ROOT/
 
-RUN javac index.jsp
+# Expose port 8080 for accessing the application
+EXPOSE 8080
 
-CMD ["java","index"]
+# Default command to start Tomcat
+CMD ["catalina.sh", "run"]
