@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY . /app
 
-RUN index.jsp
+RUN javac index.jsp
 
 CMD ["java","index"]
